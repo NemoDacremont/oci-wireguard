@@ -1,6 +1,6 @@
 FROM alpine:3.23
 
-RUN apk add --no-cache wireguard-tools sudo coredns
+RUN apk add --no-cache wireguard-tools sudo coredns iptables
 
 RUN addgroup -g 1000 wireguard && \
   adduser -u 1000 -G wireguard -h /home/wireguard -D wireguard && \
